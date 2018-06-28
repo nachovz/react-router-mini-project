@@ -5,6 +5,8 @@ import NavBar from '../component/navbar.jsx';
 import BlogJumbotron from '../component/BlogJumbotron.jsx';
 import BlogSidebar from '../component/BlogSidebar.jsx';
 import BlogFooter from '../component/BlogFooter.jsx';
+import BlogPostCards from '../component/BlogPostCards.jsx';
+import BlogSamplePost from '../component/BlogSamplePost.jsx';
 
 //create your first component
 export class Blog extends React.Component{
@@ -15,12 +17,12 @@ export class Blog extends React.Component{
                 <div id="blogTopContentContainer" className="container">
                     <NavBar />
                     <BlogJumbotron />
-                    {/*card components will go here*/}
+                    <BlogPostCards />
                 </div>
                 <div id="blogMainContentContainer" className="container">
                     <div className="row">
                         <div className="col-md-8">
-                            {/*sample blog post components will go here*/}
+                            <BlogSamplePost />
                         </div>
                         <aside className="col-md-4">
                             <BlogSidebar />
