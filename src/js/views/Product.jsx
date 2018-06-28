@@ -7,7 +7,7 @@ export class Product extends React.Component{
         return (
             <div className="text-center mt-5">
                 <h1>Product</h1>
-
+                <h2>test</h2>
                 <p>Made by <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with love!</p>
             </div>
         );
