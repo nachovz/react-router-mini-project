@@ -23,6 +23,14 @@ export class Home extends React.Component{
                     <Link to={"/blog"}><span className="badge badge-pill badge-primary">Blog</span></Link>
                     <Link to={"/checkout"}><span className="badge badge-pill badge-primary">Checkout</span></Link>
                     
+                    
+                    <h2>Hello</h2>
+                    <h2>Hello</h2>
+                    <h2>Hello</h2>
+                    <h2>Hello</h2>
+                    <h2>Hello</h2>
+                    <h2>Hello</h2>
+                    
                 </div>
             </React.Fragment>
         );
