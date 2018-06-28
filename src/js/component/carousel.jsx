@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import ex from '../../img/ex.jpg';
 import PropTypes from 'prop-types';
 
-function Carousel(props) {
+function Carousel() {
     return (
+        
         <div>
             <div id="carouselExampleIndicators" className="carousel slide mb-5" data-ride="carousel">
                 <ol className="carousel-indicators">
@@ -57,14 +58,37 @@ function Carousel(props) {
                 </a>
             </div>
             
+            
+            
+            
+            
             <div className="container">
                 <div className="row">
-                    <MiddleContent />
-                    <MiddleContent />
-                    <MiddleContent />
+                    <MiddleContent 
+                        text = 'Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor 
+                        id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum 
+                        at eros. Praesent commodo cursus magna.'
+                    />
+                    <MiddleContent 
+                        text = 'Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio 
+                        sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus 
+                        commodo, tortor mauris condimentum nibh.'
+                    />
+                    <MiddleContent 
+                        text = 'Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum 
+                        id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum 
+                        nibh, ut fermentum massa justo sit amet risus.'
+                    />
                 </div>
                 
                 <hr className="my-5"/>
+                
+                
+
+
+
+
+
                 
                 <BottomHomeContent 
                     header = 'First featurette heading.'
@@ -96,11 +120,18 @@ function Carousel(props) {
                     commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.'
                 />
                 
-                
+                <hr className="my-5"/>
             </div>
             
             
             
+            
+            
+            
+            
+            
+            
+            <Footer />
         </div>
         );
     
@@ -108,18 +139,23 @@ function Carousel(props) {
 
 
 
-function MiddleContent() {
+function MiddleContent(props) {
     return (
         <div className="col-lg-4 text-center">
             <img className="rounded-circle" src={ex} alt="Generic placeholder image" width="140" height="140"/>
             <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-            Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <p>{props.text}</p>
             <p><a className="btn btn-secondary" href="#" role="button">View details »</a></p>
         </div>
     
     );
 }
+MiddleContent.propTypes = {
+ text: PropTypes.string
+};
+
+
+
 
 function BottomHomeContent(props) {
     return (
@@ -144,8 +180,19 @@ BottomHomeContent.propTypes = {
 };
 
 
-
-
+function Footer() {
+    return (
+        <div className="container">
+            <p className="float-right"><a href="#">Back to top</a></p>
+            <p>
+                © 2017-2018 Company, Inc. · 
+                <a href="#">Privacy</a>
+                · 
+                <a href="#">Terms</a>
+            </p>
+        </div>
+    );
+}
 
 
 export default Carousel;
