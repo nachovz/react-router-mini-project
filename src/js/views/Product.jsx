@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Jobel and Jesus product page team 2
+
 //create your first component
 export class Product extends React.Component{
     
