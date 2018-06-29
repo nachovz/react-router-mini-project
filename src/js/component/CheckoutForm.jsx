@@ -86,7 +86,7 @@ function CheckoutForm() {
                 </div>
               </div>
             </div>
-            <hr class="mb-4">
+            <hr class="mb-4"/>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="same-address"/>
               <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
@@ -146,7 +146,6 @@ function CheckoutForm() {
                 </div>
               </div>
             </div>
-            <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
           </form>
         </div>
