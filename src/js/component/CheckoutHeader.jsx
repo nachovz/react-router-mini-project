@@ -11,4 +11,4 @@ function CheckoutHeader() {
     );
 }
 
-export default CheckoutHeader();
+export default CheckoutHeader;
