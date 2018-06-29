@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 //create your first component
-function CheckoutCart() {
+function CheckoutHeader() {
     return (
         <div className="py-5 text-center">
             <h2>Checkout form</h2>
@@ -11,4 +11,4 @@ function CheckoutCart() {
     );
 }
 
-export default CheckoutCart();
+export default CheckoutHeader();
