@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+//Yariel, Frank & Raul
 //include images into your bundle
 import rigoImage from '../../img/rigo-baby.jpg';
 import NavBar from '../component/navbar.jsx';
+import Carousel from '../component/carousel.jsx';
 
 //create your first component
 export class Home extends React.Component{
@@ -12,6 +13,7 @@ export class Home extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
+<<<<<<< HEAD
                 <div className="text-center mt-5">
                     <h1>Hello Rigo!</h1>
                     <p><img src={rigoImage} /></p>
@@ -32,6 +34,9 @@ export class Home extends React.Component{
                     <h2>Hello</h2>
                     
                 </div>
+=======
+                <Carousel />
+>>>>>>> 01ef75ac612435f01b2a37f3e900c0b5b60295a9
             </React.Fragment>
         );
     }
