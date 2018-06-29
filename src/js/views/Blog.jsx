@@ -13,9 +13,9 @@ export class Blog extends React.Component{
     
     render(){
         return (
-            <div>
+            <React.Fragment>
+                <NavBar />
                 <div id="blogTopContentContainer" className="container">
-                    <NavBar />
                     <BlogJumbotron />
                     <BlogPostCards />
                 </div>
@@ -30,7 +30,7 @@ export class Blog extends React.Component{
                     </div>
                 </div>
                 <BlogFooter />
-            </div>
+            </React.Fragment>
         );
     }
 }
