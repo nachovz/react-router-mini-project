@@ -60,6 +60,70 @@ export default class Layout extends React.Component {
                     content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
                 }
             ],
+            archive: [
+                {
+                    date: "March 2014",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "February 2014",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "January 2014",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "December 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "November 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "October 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "September 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "August 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "July 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "June 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "May 2013",
+                    url: "http://picsum.photos/?random"
+                },
+                {
+                    date: "April 2013",
+                    url: "http://picsum.photos/?random"  
+                }
+                ],
+            social_networks: [
+                    {
+                        name: "Twitter",
+                        url: "https://twitter.com/4geeksacademy"
+                    },
+                    {
+                        name: "Facebook",
+                        url: "https://facebook.com/4geeksacademy"
+                    },
+                    {
+                        name: "Github",
+                        url: "https://github.com/4geeksacademy"
+                    }
+                ],
             cart:[]
         };
         

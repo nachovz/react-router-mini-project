@@ -4,10 +4,7 @@ import React from 'react';
 function CheckoutForm() {
     return (
         <div className="container">
-            <div className="py-5 text-center">
-                <h2>Checkout form</h2>
-                <p>Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-            </div>
+
             <div className="row">
                 <div className="col-md-8 order-md-1">
                     <h4 className="mb-3">Billing address</h4>
