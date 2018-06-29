@@ -55,4 +55,4 @@ function CheckoutCart() {
     );
 }
 
-export default CheckoutCart();
+export default CheckoutCart;
