@@ -2,7 +2,9 @@ import React from 'react';
 import 'bootstrap';
 import NavBar from '../component/navbar.jsx';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ProdCardBody from '../component/ProdCardLoop.jsx';
+import ProdCardHeader from '../component/ProdCardHeader.jsx';
+import ProdCardBody from '../component/ProdCardBody.jsx';
+import ProdCardFooter from '../component/ProdCardFooter.jsx';
 
 //Jobel and Jesus product page team 2
 
