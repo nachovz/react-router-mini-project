@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap';
 import NavBar from '../component/navbar.jsx';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import ProdCardLoop from '../component/ProdCardLoop.jsx';
+import ProdCardBody from '../component/ProdCardLoop.jsx';
 
 //Jobel and Jesus product page team 2
 
@@ -24,9 +24,6 @@ export class Product extends React.Component{
                         <div className="product-device box-shadow d-none d-md-block"></div>
                         <div className="product-device product-device-2 box-shadow d-none d-md-block"></div>
                     </div>
-                </div>
-                <div id="prodCardContentContainer">
-                    <ProdCardLoop />
                 </div>
             </React.Fragment>
         );
