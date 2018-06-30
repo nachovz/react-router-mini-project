@@ -14,6 +14,7 @@ export class Home extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <Carousel />
+                
             </React.Fragment>
         );
     }
