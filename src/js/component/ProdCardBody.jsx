@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function ProdCardBody(props){
     return (        
         <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        
             <div className="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
                 <div className="my-3 py-3">
                     <h2 className="display-5">Another headline</h2>
@@ -23,6 +24,74 @@ function ProdCardBody(props){
                     <style>{'div .cardLoop2 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
                 </div>
             </div>
+            
+            
+            
+            <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            
+                <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                    <div className="my-3 p-3">
+                        <h2 className="display-5">Another headline</h2>
+                        <p className="lead">And an even wittier subheading.</p>
+                    </div>
+                    <div className="cardLoop3 bg-dark box-shadow mx-auto"></div>
+                    <style>{'div .cardLoop3 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                </div>
+                <div className="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+                    <div className="my-3 py-3">
+                        <h2 className="display-5">Another headline</h2>
+                        <p className="lead">And an even wittier subheading.</p>
+                    </div>
+                    <div className="cardLoop4 bg-light box-shadow mx-auto"></div>
+                    <style>{'div .cardLoop4 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                </div>
+            </div>            
+            
+            
+            
+            <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+                <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                    <div className="my-3 p-3">
+                        <h2 className="display-5">Another headline</h2>
+                        <p className="lead">And an even wittier subheading.</p>
+                    </div>
+                    <div className="bg-white box-shadow mx-auto"></div>
+                    <style>{'div .cardLoop5 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                </div>
+                <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                    <div className="my-3 py-3">
+                        <h2 className="display-5">Another headline</h2>
+                        <p className="lead">And an even wittier subheading.</p>
+                    </div>
+                    <div className="bg-white box-shadow mx-auto"></div>
+                    <style>{'div .cardLoop6 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                </div>
+            </div>
+    
+    
+    
+            <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+                <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                    <div className="my-3 p-3">
+                        <h2 className="display-5">Another headline</h2>
+                        <p className="lead">And an even wittier subheading.</p>
+                    </div>
+                    <div className="bg-white box-shadow mx-auto" style=""></div>
+                    <style>{'div .cardLoop7 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                </div>
+                <div className="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+                    <div className="my-3 py-3">
+                        <h2 className="display-5">Another headline</h2>
+                        <p className="lead">And an even wittier subheading.</p>
+                    </div>
+                    <div className="bg-white box-shadow mx-auto"></div>
+                    <style>{'div .cardLoop8 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                </div>
+            </div>
+    
+    
+            
+            
         </div>
         );
 }
