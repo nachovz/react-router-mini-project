@@ -28,6 +28,9 @@ export class Product extends React.Component{
                 <div id="prodCardContentContainer">
                     <ProdCardLoop />
                 </div>
+                <div id="prodCardContentContainer">
+                    <ProdCardFooter />
+                </div>
             </React.Fragment>
         );
     }
