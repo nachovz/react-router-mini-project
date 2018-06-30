@@ -115,8 +115,8 @@ function ArchiveItem(props){
 }
 
 ArchiveItem.propTypes = {
-    date: PropTypes.array,
-    url: PropTypes.array
+    date: PropTypes.string,
+    url: PropTypes.string
 };
 
 function SocialMedia(props){
@@ -128,6 +128,6 @@ function SocialMedia(props){
 }
 
 SocialMedia.propTypes = {
-    name: PropTypes.array,
-    url: PropTypes.array
+    name: PropTypes.string,
+    url: PropTypes.string
 };
