@@ -5,6 +5,7 @@ import NavBar from '../component/navbar.jsx';
 import CheckoutHeader from '../component/CheckoutHeader.jsx';
 import CheckoutForm from '../component/CheckoutForm.jsx';
 import CheckoutCart from '../component/CheckoutCart.jsx';
+import CheckoutFooter from '../component/CheckoutFooter.jsx';
 
 //create your first component
 export class Checkout extends React.Component{
@@ -19,7 +20,7 @@ export class Checkout extends React.Component{
                         <CheckoutCart />
                         <CheckoutForm />
                     </div>
-                    <p>Made by Mike and Ed <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with love!</p>
+                    <CheckoutFooter />
                 </div>
             </React.Fragment>
         );
