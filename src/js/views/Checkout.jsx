@@ -6,6 +6,7 @@ import CheckoutHeader from '../component/CheckoutHeader.jsx';
 import CheckoutForm from '../component/CheckoutForm.jsx';
 import CheckoutCart from '../component/CheckoutCart.jsx';
 import CheckoutFooter from '../component/CheckoutFooter.jsx';
+import CheckoutBody from '../component/CheckoutBody.jsx';
 
 //create your first component
 export class Checkout extends React.Component{
