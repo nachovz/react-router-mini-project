@@ -19,7 +19,9 @@ export class Product extends React.Component{
                     <ProdCardHeader />
                 </div>
                 <div id="prodCardContentBody">
-                    <ProdCardBody />
+                    <ProdCardBody 
+                                other={["Email support","Help center access"]}
+                    />
                 </div>
                 <div id="prodCardContentFooter">
                     <ProdCardFooter />
