@@ -7,7 +7,7 @@ export default class ProdCardBody extends React.Component {
     super(props);
     this.state = {
         arrObj: [0,1,2,3,4],
-        p_bootstrap: [0,2],
+        p_bootstrap: [0,1],
         p_bgclass1: "bg-dark",
         p_bgclass2: "bg-light",
         p_bgclass3: "bg-light",
@@ -61,7 +61,8 @@ export default class ProdCardBody extends React.Component {
             return (<div className="containerBody" >
                 {this.state.arrObj.map((value, index) => {
                     return <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" key={index}>
-                        <div className={this.state.p_bgclass1+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"}>
+                        {this.state.p_bootstrap.map((value, index) => {
+                        return <div className={this.state.p_bgclass1+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"} key={index}>
                             <div className="my-3 py-3">
                                 <h2 className="display-5">Another headline</h2>
                                 <p className="lead">And an even wittier subheading.</p>
@@ -69,15 +70,9 @@ export default class ProdCardBody extends React.Component {
                             <div className={"cardLoop1 "+this.state.p_bgclass2+" box-shadow mx-auto"}></div>
                             <style>{'div .cardLoop1 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
                         
-                        </div>
-                        <div className={this.state.p_bgclass3+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden"}>
-                            <div className="my-3 p-3">
-                                <h2 className="display-5">Another headline</h2>
-                                <p className="lead">And an even wittier subheading.</p>
-                            </div>
-                            <div className={"cardLoop2 "+this.state.p_bgclass4+" box-shadow mx-auto"}></div>
-                            <style>{'div .cardLoop2 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
-                        </div>
+                        </div>;})
+            } 
+
                     </div>;
                 })
             }           
