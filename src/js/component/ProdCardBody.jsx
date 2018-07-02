@@ -22,12 +22,44 @@ export default class ProdCardBody extends React.Component {
     //});   
     
         GetStyleClass1 (pcounter) {
-            let pbgclass1 = 'bg-dark';
+            let pbgclass1 = '';
+            if (pcounter == 1) {
+                pbgclass1 = 'bg-dark';
+            }
+            if (pcounter == 2) {
+                pbgclass1 = 'bg-light';
+            }
+            if (pcounter == 3) {
+                pbgclass1 = 'bg-light';
+            }
+            if (pcounter == 4) {
+                pbgclass1 = 'bg-primary';
+            }            
+            if (pcounter >= 5) {
+                pbgclass1 = 'bg-light';
+            }
+          
             console.log('Class1 '+pcounter);
             return pbgclass1;
         }
         GetStyleClass2 (pcounter) {
-            let pbgclass2 = 'bg-light';
+            let pbgclass2 = '';
+            if (pcounter == 1) {
+                pbgclass2 = 'bg-light';
+            }
+            if (pcounter == 2) {
+                pbgclass2 = 'bg-dark';
+            }            
+            if (pcounter == 3) {
+                pbgclass2 = 'bg-dark';
+            }            
+            if (pcounter == 4) {
+                pbgclass2 = 'bg-light';
+            } 
+            if (pcounter >= 5) {
+                pbgclass2 = 'bg-white';
+            }    
+             
             console.log('Class2 '+pcounter);
             return pbgclass2;
         }
@@ -49,7 +81,7 @@ export default class ProdCardBody extends React.Component {
                                 <h2 className="display-5">Another headline</h2>
                                 <p className="lead">And an even wittier subheading.</p>
                             </div>
-                            <div className={"cardLoop1 "+this.GetStyleClass2(++counter)+" box-shadow mx-auto"}></div>
+                            <div className={"cardLoop1 "+this.GetStyleClass2(++counter2)+" box-shadow mx-auto"}></div>
                             <style>{'div .cardLoop1 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
                         
                         </div>;})
