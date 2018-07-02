@@ -39,7 +39,7 @@ export default class ProdCardBody extends React.Component {
                 pbgclass1 = 'bg-light';
             }
           
-            console.log('Class1 '+pcounter);
+            //console.log('Class1 '+pcounter);
             return pbgclass1;
         }
         GetStyleClass2 (pcounter) {
@@ -60,7 +60,7 @@ export default class ProdCardBody extends React.Component {
                 pbgclass2 = 'bg-white';
             }    
              
-            console.log('Class2 '+pcounter);
+            //console.log('Class2 '+pcounter);
             return pbgclass2;
         }
         
