@@ -15,10 +15,6 @@ export class Checkout extends React.Component{
         return (
             <React.Fragment>
                 <NavBar />
-<<<<<<< HEAD
-
-                <p>Made by Mike and Ed <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with love!</p>
-=======
                 <div className="container">  
                     <CheckoutHeader />
                     <div className="row">
@@ -27,7 +23,6 @@ export class Checkout extends React.Component{
                     </div>
                     <CheckoutFooter />
                 </div>
->>>>>>> de875dfde13e144ed211f41021446ae943366746
             </React.Fragment>
         );
     }
