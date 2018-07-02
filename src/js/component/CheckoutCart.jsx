@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
-export default class Todolist extends React.Component{
+export default class CheckoutCart extends React.Component{
     constructor() {
         super();
         this.state = {
