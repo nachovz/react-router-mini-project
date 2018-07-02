@@ -24,21 +24,21 @@ function BlogPostCards(index){
     return (
         
         <div className="row mb-2">
-            <div className="col-md-6">
-            
-                {
-                product.map((item,index)=>{
-                    return <ProductInfo 
-                            key={index}
-                            name={item.name}
-                            image={item.image}
-                            description={item.description}
-                            />;
-                    
-                })
-                }
 
-            </div>
+            
+            {
+            product.map((item,index)=>{
+                return <ProductInfo 
+                        key={index}
+                        name={item.name}
+                        image={item.image}
+                        description={item.description}
+                        />;
+                
+            })
+            }
+
+
             
             
             {/*<div className="col-md-6">
@@ -71,14 +71,16 @@ export default BlogPostCards;
 
 function ProductInfo(props){
             return (
-                <div className="card flex-md-row mb-4 box-shadow h-md-250">
-                    <div className="card-body d-flex flex-column align-items-start">
-                        <h3 className="mb-0">
-                            <a className="text-dark" href="#">{props.name}</a>
-                        </h3>
-                        <p className="card-text mb-auto pt-4">{props.description}</p>
-                    </div>    
-                    <img className="card-img-right flex-auto d-none d-md-block width:200px height:250px" src={props.image}></img>
+                <div className="col-md-6">
+                    <div className="card flex-md-row mb-4 box-shadow h-md-250">
+                        <div className="card-body d-flex flex-column align-items-start">
+                            <h3 className="mb-0">
+                                <a className="text-dark" href="#">{props.name}</a>
+                            </h3>
+                            <p className="card-text mb-auto pt-4">{props.description}</p>
+                        </div>    
+                        <img className="card-img-right flex-auto d-none d-md-block width:200px height:250px" src={props.image}></img>
+                    </div>
                 </div>
                 
                 );
