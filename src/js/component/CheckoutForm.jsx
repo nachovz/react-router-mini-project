@@ -102,7 +102,7 @@ function CheckoutForm() {
     
                 <div className="d-block my-3">
                     <div className="custom-control custom-radio">
-                        <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" checked="" required=""></input>
+                        <input id="credit" name="paymentMethod" type="radio" className="custom-control-input" required=""></input>
                         <label className="custom-control-label" htmlFor="credit">Credit card</label>
                     </div>
                     <div className="custom-control custom-radio">

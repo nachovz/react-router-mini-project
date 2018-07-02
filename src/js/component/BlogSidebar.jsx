@@ -3,14 +3,73 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 function BlogSidebar(props){
-    const dates = [];
-    props.date.forEach(function(element,index){
-        dates.push(<li key={index}><a href="#">{element}</a></li>);
-        });
-    const socials = [];
-    props.social.forEach(function(element,index){
-        socials.push(<li key={index}><a href="#">{element}</a></li>);
-    });
+    
+    var archives = [
+        {
+            date:"March 2018",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"February 2018",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"January 2018",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"December 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"November 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"October 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"September 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"August 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"July 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"June 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"May 2017",
+            url: "http://picsum.photos/?random"
+        },
+        {
+            date:"April 2017",
+            url: "http://picsum.photos/?random"
+        }
+    ];
+
+    var socials = [
+        {
+            name:"GitHub",
+            url: "https://github.com/4GeeksAcademy"
+        },
+        {
+            name:"Twitter",
+            url: "https://twitter.com/4GeeksAcademy"
+        },
+        {
+            name:"Facebook",
+            url: "https://www.facebook.com/4geeksacademy/"
+        }
+    ];             
+                    
     return (
         <div>
             <div className="p-3 mb-3 bg-light rounded">
@@ -19,23 +78,56 @@ function BlogSidebar(props){
             </div>
             <div className="p-3">
                 <h4 className="font-italic">Archives</h4>
-                <ol className="list-unstyled mb-0">
-                    {dates}
-                </ol>
+                <ol className="list-unstyled mb-0">{
+                    archives.map((item,index)=>{
+                            return <ArchiveItem 
+                                    key={index}
+                                    date={item.date}
+                                    url={item.url}
+                                    />;
+                    })
+                }</ol>
             </div>
             <div className="p-3">
                 <h4 className="font-italic">Elsewhere</h4>
-                <ol className="list-unstyled">
-                    {socials}
-                </ol>
+                <ol className="list-unstyled">{
+                    socials.map((item,index)=>{
+                        return <SocialMedia
+                                key={index}
+                                name={item.name}
+                                url={item.url}
+                                />;
+                    })
+                }</ol>
             </div>
         </div>
         );
 }
 
-BlogSidebar.propTypes = {
-        date: PropTypes.string,
-        social: PropTypes.string
-    };
-
 export default BlogSidebar;
+
+function ArchiveItem(props){
+    return(
+        <li>
+            <a href={props.url}>{props.date}</a>
+        </li>
+        );
+}
+
+ArchiveItem.propTypes = {
+    date: PropTypes.string,
+    url: PropTypes.string
+};
+
+function SocialMedia(props){
+    return(
+        <li>
+            <a href={props.url} target="_blank" rel="noopener noreferrer">{props.name}</a>
+        </li>
+        );
+}
+
+SocialMedia.propTypes = {
+    name: PropTypes.string,
+    url: PropTypes.string
+};
