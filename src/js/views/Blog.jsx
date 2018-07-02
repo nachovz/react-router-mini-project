@@ -16,7 +16,10 @@ export class Blog extends React.Component{
             <React.Fragment>
                 <NavBar />
                 <div id="blogTopContentContainer" className="container">
-                    <BlogJumbotron />
+                    <BlogJumbotron
+                        title="Title of a longer featured blog post"
+                        subHeadline="Multiple lines of text that form the lede, informing new readers quickly and efficiently about what&apos;s most interesting in this post&apos;s contents."
+                        />
                     <BlogPostCards />
                 </div>
                 <div id="blogMainContentContainer" className="container">
@@ -25,7 +28,10 @@ export class Blog extends React.Component{
                             <BlogSamplePost />
                         </div>
                         <aside className="col-md-4">
-                            <BlogSidebar />
+                            <BlogSidebar
+                                date={["March 2018", "February 2018", "January 2018", "December 2017", "November 2017", "October 2017", "September 2017", "August 2017", "July 2017", "June 2017", "May 2017", "April 2017"]}
+                                social={["GitHub", "Twitter", "Facebook"]}
+                            />
                         </aside>
                     </div>
                 </div>
