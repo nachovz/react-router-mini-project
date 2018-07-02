@@ -27,7 +27,7 @@ function BlogSamplePost(index){
     return (
         
         <div className="col-md-12 blog-main">
-            <h3 className="pb-3 mb-4 font-italic border-bottom"> From the Firehose</h3>
+            <h3 className="pb-3 mb-4 font-italic border-bottom"> From the Firehouse</h3>
             
             {
             posts.map((item,index)=>{
