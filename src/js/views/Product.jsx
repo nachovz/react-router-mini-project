@@ -6,7 +6,7 @@ import ProdCardHeader from '../component/ProdCardHeader.jsx';
 import ProdCardBody from '../component/ProdCardBody.jsx';
 import ProdCardFooter from '../component/ProdCardFooter.jsx';
 
-import '../../styles/_text.scss';
+
 
 //Jobel and Jesus product page team 2
 
