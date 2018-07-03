@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import {Consumer} from "../stores/AppContext.jsx";
 
 export default class CheckoutCart extends React.Component{
     constructor() {
