@@ -144,7 +144,7 @@ export default class Layout extends React.Component {
             <React.Fragment>
                 <BrowserRouter>
                     <Switch>
-                        <Provider value={{state:this.state}}>
+                        <Provider value={{state:this.state, actions:this.actions}}>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/product" component={Product} />
                             <Route exact path="/blog" component={Blog} />
