@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import {Temp} from "./views/Temp.jsx";
+import {Home} from "./views/Home.jsx";
 import {Checkout} from "./views/Checkout.jsx";
 import {Product} from "./views/Product.jsx";
 import {Blog} from "./views/Blog.jsx";
@@ -145,8 +145,8 @@ export default class Layout extends React.Component {
                 <BrowserRouter>
                     <Switch>
                         <Provider value={{state:this.state}}>
-                            <Route exact path="/" component={Temp} />
-                            <Route exact path="/product/:id" component={Product} />
+                            <Route exact path="/" component={Home} />
+                            <Route exact path="/product" component={Product} />
                             <Route exact path="/blog" component={Blog} />
                             <Route exact path="/checkout" component={Checkout} />
                         </Provider>
