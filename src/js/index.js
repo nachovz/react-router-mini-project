@@ -12,7 +12,7 @@ import 'bootstrap';
 import '../styles/index.scss';
 
 //import your own components
-import Layout from './layout.jsx';
+import Layout from './layout.1.jsx';
 WebFont.load({
   google: {
     families: ['Titillium Web:300,400,700', 'sans-serif']
