@@ -68,8 +68,9 @@ export default class ProdCardBody extends React.Component {
 
             return (<div className="containerBody" >
                 <Consumer>
-                    {({ state }) => 
-                                (state.products.article.map((value, index) => {
+                    {
+                    ({ state }) => 
+                                (state.products.map((value, index) => {
                     
     
                         return <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" key={index} >
@@ -92,7 +93,8 @@ export default class ProdCardBody extends React.Component {
                 
             )}        
                 </Consumer>
-            </div>);}
+            </div>);
+            }
     }
     
      ProdCardBody.propTypes = {
