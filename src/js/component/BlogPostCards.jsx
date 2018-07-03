@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import {Consumer} from "../stores/AppContext.jsx";
 
 function BlogPostCards(index){
     
@@ -26,19 +27,22 @@ function BlogPostCards(index){
         <div className="row mb-2">
 
             
-            {
-            product.map((item,index)=>{
-                return <ProductInfo 
-                        key={index}
-                        name={item.name}
-                        image={item.image}
-                        description={item.description}
-                        />;
-                
-            })
-            }
-
-
+            <Consumer>
+                {({ state }) => 
+                    (
+                        state.products.map((item,index)=>{
+                            return <ProductInfo 
+                                    key={index}
+                                    name={item.name}
+                                    image={item.image_url}
+                                    description={item.description}
+                                    />;
+                            
+                        })
+                        
+                    )
+                }
+            </Consumer>
             
             
             {/*<div className="col-md-6">
@@ -77,9 +81,9 @@ function ProductInfo(props){
                             <h3 className="mb-0">
                                 <a className="text-dark" href="#">{props.name}</a>
                             </h3>
-                            <p className="card-text mb-auto pt-4">{props.description}</p>
+                            <p className="card-text mb-auto pt-4 overflow-wrap: break-word">{props.description}</p>
                         </div>    
-                        <img className="card-img-right flex-auto d-none d-md-block width:200px height:250px" src={props.image}></img>
+                        <img className="card-img-top img-fluid h-md-250" src={props.image}></img>
                     </div>
                 </div>
                 
