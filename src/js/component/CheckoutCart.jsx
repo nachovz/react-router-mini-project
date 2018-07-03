@@ -1,23 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
-export default class Todolist extends React.Component{
+export default class CheckoutCart extends React.Component{
     constructor() {
         super();
         this.state = {
             cart: [
-                {
-                    id: 1, name: "Freeze Ray", 
-                    price: 350.99, 
-                    desc: "The freeze ray is Felonius Gru's signature weapon. As its name implies, the freeze ray, when fired, projects a ray that instanteously freezes whatever the beam hits on contact."
-                },
+                {id: 1, name: "Freeze Ray", price: 350.99, desc: "The freeze ray is Felonius Gru's signature weapon. As its name implies, the freeze ray, when fired, projects a ray that instanteously freezes whatever the beam hits on contact."},
                 {id: 2, name: "SR-9", price: 150.99, desc: "The SR-6, more often referred to as just the shrink ray, is, as the informal name implies, a prototype shrink-ray device designed by a top-secret East Asian laboratory. The weapon can shrink any object to the size of an apple."},
                 {id: 3, name: "Zapp Lipstick Taser", price: 1050.99, desc: "An effective combination between concealability and power, it has the ability to incapacitate opponents struck by its prongs."},
                 {id: 4, name: "Flamethrower", price: 55.10, desc: "The Flamethrower is a mechanical incendiary device designed to project a long, controllable stream of fire."},
                 {id: 5, name: "Inflation Gun", price: 99.99, desc: "The Inflation Gun is a gadget used by Gru to inflate balloons for Agnes' birthday party."}
             ],
-            discount: 1,
+            discount: 25,
             total: 999
         };
     }
