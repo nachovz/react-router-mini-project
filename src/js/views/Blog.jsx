@@ -28,10 +28,7 @@ export class Blog extends React.Component{
                             <BlogSamplePost />
                         </div>
                         <aside className="col-md-4">
-                            <BlogSidebar
-                                date={["March 2018", "February 2018", "January 2018", "December 2017", "November 2017", "October 2017", "September 2017", "August 2017", "July 2017", "June 2017", "May 2017", "April 2017"]}
-                                social={["GitHub", "Twitter", "Facebook"]}
-                            />
+                            <BlogSidebar />
                         </aside>
                     </div>
                 </div>
