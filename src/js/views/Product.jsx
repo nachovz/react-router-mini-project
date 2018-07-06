@@ -6,6 +6,9 @@ import ProdCardHeader from '../component/ProdCardHeader.jsx';
 import ProdCardBody from '../component/ProdCardBody.jsx';
 import ProdCardFooter from '../component/ProdCardFooter.jsx';
 
+
+
+
 //Jobel and Jesus product page team 2
 
 //create your first component
