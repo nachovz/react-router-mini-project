@@ -55,6 +55,9 @@
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
+div .bg-light{
+    color: black!important;
+}
 
 .product-device {
     position: absolute;
@@ -121,7 +124,16 @@
 .overflow-hidden {
     overflow: hidden;
 }
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 393px;
+    height: 300px;
+    border:1px solid #021a40;
+    
+}
 
 
 
 //* end of product SCSS
+
