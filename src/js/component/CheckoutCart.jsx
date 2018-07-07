@@ -25,7 +25,7 @@ export default class CheckoutCart extends React.Component{
                     <Consumer>
                         {({ state }) => 
                             (
-                                state.products.map( (item, index) => {
+                                state.cart.map( (item, index) => {
 
                                     totalItems = totalItems + 1 ;
                                     totalPrice = item.price + totalPrice;
