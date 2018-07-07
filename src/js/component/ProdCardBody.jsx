@@ -35,7 +35,6 @@ export default class ProdCardBody extends React.Component {
         if (pcounter >= 5) {
             pbgclass1 = 'bg-light';
         }
-        console.log('Class1 '+pcounter);
         return pbgclass1;
     }
     
@@ -89,21 +88,17 @@ export default class ProdCardBody extends React.Component {
         }
     
     SetProductArticle (index, newValue, counter, pindexOf, plastIndexOf) {
-        console.log( 'index '+index+' pindexOf '+pindexOf+' plastIndexOf '+plastIndexOf );
         if ( pindexOf === plastIndexOf-1 ) {
             if ( this.arrObj.length == 0 ) {
                 
                 this.pushValueObj(newValue);
-                console.log( 'Send Print 3 element '+index);
                 return this.returnValueArrays(index, this.arrObj);
                 }
             else {this.pushValueObj(newValue);
-                console.log( 'Send Print 4 element '+index+' '+this.arrObj.length);
                 return this.returnValueArrays(index, this.arrObj);
                 }
             } 
         else { if ( JSON.stringify(this.arrObj)=='[]' ) {
-                console.log( 'Add element to array == '+index);
                 this.pushValueObj(newValue);
                 return null;
                 }
@@ -112,7 +107,6 @@ export default class ProdCardBody extends React.Component {
                             let parray = this.arrObj;
                             this.arrObj = [];
                             
-                            console.log( 'Send Print 2 element == '+index);
                             return  this.returnValueArrays(index,parray);
                 }       else { return null; }
             }
