@@ -10,10 +10,12 @@ export default class ProdCardBody extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-        arrObj: [0,1,2,3],
         //arrObj: [0,1,2,3],
-        p_bootstrap: [0,1]
+        p_bootstrap: [0,1],
+        oldValue: '',
+        newValue: ''
         };
+        this.arrObj = [];        
     }
 
     GetStyleClass1 (pcounter) {
@@ -55,11 +57,67 @@ export default class ProdCardBody extends React.Component {
             pbgclass2 = 'bg-white';
         }    
          
-        console.log('Class2 '+pcounter);
+        //console.log('Class2 '+pcounter);
         return pbgclass2;
     }
 
-
+    pushValueObj(value) {
+        this.arrObj.push(value);
+        //this.forceUpdate();
+        }
+        
+    returnValueArrays (index, parray) {
+        return <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" key={index} >
+            {parray.map((valuebootstrap, index) => {
+    
+                            return <div className={"bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"} key={index} >
+                                <div className="my-3 py-3">
+                                    <h2 className="display-5">{valuebootstrap.name}</h2>
+                                    <p className="lead">{valuebootstrap.description}</p>
+                                    <p className="lead">Price: {valuebootstrap.price}</p>
+                                </div>
+                                <div className={"cardLoop1 bg-light box-shadow mx-auto"}>
+                                    <img className="img-responsive" src={valuebootstrap.image_url} alt="Chania" width="200" height="200" />
+                                </div>
+                                <style>{'div .cardLoop1 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
+                            
+                            </div>;
+                            })
+                        } 
+        </div>;
+        
+        }
+    
+    SetProductArticle (index, newValue, counter, pindexOf, plastIndexOf) {
+        console.log( 'index '+index+' pindexOf '+pindexOf+' plastIndexOf '+plastIndexOf );
+        if ( pindexOf === plastIndexOf-1 ) {
+            if ( this.arrObj.length == 0 ) {
+                
+                this.pushValueObj(newValue);
+                console.log( 'Send Print 3 element '+index);
+                return this.returnValueArrays(index, this.arrObj);
+                }
+            else {this.pushValueObj(newValue);
+                console.log( 'Send Print 4 element '+index+' '+this.arrObj.length);
+                return this.returnValueArrays(index, this.arrObj);
+                }
+            } 
+        else { if ( JSON.stringify(this.arrObj)=='[]' ) {
+                console.log( 'Add element to array == '+index);
+                this.pushValueObj(newValue);
+                return null;
+                }
+                else {  this.pushValueObj(newValue);
+                        if ( this.arrObj.length == 2 ) {
+                            let parray = this.arrObj;
+                            this.arrObj = [];
+                            
+                            console.log( 'Send Print 2 element == '+index);
+                            return  this.returnValueArrays(index,parray);
+                }       else { return null; }
+            }
+        }
+    }
  
     render() {
         let counter = 0;
@@ -71,36 +129,18 @@ export default class ProdCardBody extends React.Component {
                     {
                     ({ state }) => 
                                 (state.products.map((value, index) => {
-                    
-    
-                        return <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" key={index} >
-                            {this.state.p_bootstrap.map((valuebootstrap, index) => {
-    
-                            return <div className={this.GetStyleClass1(++counter)+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"} key={index} >
-                                <div className="my-3 py-3">
-                                    <h2 className="display-5">Another headline</h2>
-                                    <p className="lead">And an even wittier subheading.</p>
-                                </div>
-                                <div className={"cardLoop1 "+this.GetStyleClass2(++counter2)+" box-shadow mx-auto"}>
-                                    <img className="img-responsive" src={value.image_url} alt="Chania" width="200" height="200" />
-                                </div>
-                                <style>{'div .cardLoop1 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
-                            
-                            </div>;})
-                        } 
-                        </div>;
-                    })
+                                return (
+                                this.SetProductArticle ( index, 
+                                                                                                value, 
+                                                                                                counter,
+                                                                                                state.products.indexOf(value),
+                                                                                                state.products.length)
+                                                                                                );
+                                                                    })
+                                
                 
             )}        
                 </Consumer>
             </div>);
             }
     }
-    
-     ProdCardBody.propTypes = {
-    id: PropTypes.number,
-    name: PropTypes.string,
-    image_url: PropTypes.string,
-    description: PropTypes.string,
-    article: PropTypes.array
-    };
