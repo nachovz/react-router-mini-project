@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Consumer} from "../stores/AppContext.jsx";
 
-function BlogPostCards(index){
+function BlogPostCards(props){
     
-    var product = [
+    {/*var product = [
         {
             id: 1,
             name: "Blogger Stickers",
@@ -18,7 +18,7 @@ function BlogPostCards(index){
             image: "https://via.placeholder.com/200x250",
             description: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
         }
-        ];
+        ];*/}
     
     
     
@@ -75,15 +75,15 @@ export default BlogPostCards;
 
 function ProductInfo(props){
             return (
-                <div className="col-md-6">
-                    <div className="card flex-md-row mb-4 box-shadow h-md-250">
-                        <div className="card-body d-flex flex-column align-items-start">
+                <div className="col-md-4">
+                    <div className="card flex">
+                        <div className="card-body">
                             <h3 className="mb-0">
                                 <a className="text-dark" href="#">{props.name}</a>
                             </h3>
-                            <p className="card-text mb-auto pt-4 overflow-wrap: break-word">{props.description}</p>
+                            <p className="card-text mb-auto pt-4">{props.description}</p>
                         </div>    
-                        <img className="card-img-top img-fluid h-md-250" src={props.image}></img>
+                        <img className="card-img-top img-fluid h-md-250 w-md-200" src={props.image}></img>
                     </div>
                 </div>
                 

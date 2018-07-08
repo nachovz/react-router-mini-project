@@ -124,7 +124,16 @@ div .bg-light{
 .overflow-hidden {
     overflow: hidden;
 }
+.img-responsive{
+    vertical-align: middle;
+    border-style: none;
+    width: 393px;
+    height: 300px;
+    border:1px solid #021a40;
+    
+}
 
 
 
 //* end of product SCSS
+

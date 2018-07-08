@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
                     id: 2,
                     name: "A cool pen",
                     price: 40,
-                    image_url: "http://picsum.photos/600/600/?image=4",
+                    image_url: "",
                     description: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
                 },
                 {
@@ -35,6 +35,13 @@ export default class Layout extends React.Component {
                     price: 1000,
                     image_url: "http://picsum.photos/600/600/?image=937",
                     description: "Aliquam eu rutrum felis, vel interdum nunc. Cras gravida volutpat ultricies. Phasellus porta mi eget dictum auctor. Etiam libero ante, fermentum vel enim nec, lacinia bibendum mauris. Cras eu risus et odio convallis vestibulum. Cras nibh lorem, tempor et ex id, imperdiet commodo tellus. Aenean eu pellentesque ex. Donec eget dapibus enim. Phasellus sollicitudin posuere elit. Quisque blandit augue tellus, ut maximus dolor hendrerit a"
+                },
+                {
+                    id: 4,
+                    name: "Another Goat",
+                    price: 2450,
+                    image_url: "http://picsum.photos/600/600/?image=937",
+                    description: " volutpat ultricies. Phasellus porta mi eget dictum auctor. Etiam libero ante, fermentum vel enim nec, lacinia bibendum mauris. Cras eu risus et odio convallis vestibulum. Cras nibh lorem, tempor et ex id, imperdiet commodo tellus. Aenean eu pellentesque ex. Donec eget dapibus enim. Phasellus sollicitudin posuere elit. Quisque blandit augue tellus, ut maximus dolor hendrerit a"
                 }
             ],
             posts: [
@@ -61,9 +68,21 @@ export default class Layout extends React.Component {
                     date: "December 23, 2013",
                     author: "Jacob",
                     content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
+                },
+                {
+                    id: 4,
+                    name: "Hey this is the 4rd one",
+                    featured_image_url: "http://picsum.photos/800/600/?image=1068",
+                    date: "January 8, 2016",
+                    author: "Luis",
+                    content: " roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
                 }
             ],
             archive: [
+                {
+                    date: "April 2014",
+                    url: "http://picsum.photos/?random"
+                },
                 {
                     date: "March 2014",
                     url: "http://picsum.photos/?random"
@@ -133,7 +152,12 @@ export default class Layout extends React.Component {
         this.actions = {
             addProductToCart: (productId) =>{
                 let tempCart = this.state.cart;
-                tempCart.push(this.state.products[productId]);
+                
+                let arrayWithTheProduct = this.state.products.filter( (product) => {
+                    return product.id === productId;  
+                });
+                
+                tempCart.push(arrayWithTheProduct[0]);
                 this.setState({cart: tempCart});
             }
         };
