@@ -6,14 +6,15 @@ export default class CheckoutCart extends React.Component{
     constructor() {
         super();
         this.state = {
-            discount: 25    
+            discount: 25,
+            totalPrice: 0,
+            totalItems: 0
         };
     }
     
     render(){
-        var totalItems = 0;
         var totalPrice = 0;
-
+        var totalItems = 0;
         return (
             <div className="col-md-4 order-md-2 mb-4">
                 <h4 className="d-flex justify-content-between align-items-center mb-3">
@@ -26,9 +27,9 @@ export default class CheckoutCart extends React.Component{
                         {({ state }) => 
                             (
                                 state.products.map( (item, index) => {
-
-                                    totalItems = totalItems + 1 ;
+                                    totalItems = index + 1 ;
                                     totalPrice = item.price + totalPrice;
+                                    console.log(totalItems);
                                 
                                     return (
                                         <li key={item.id} className="list-group-item d-flex justify-content-between lh-condensed">
@@ -49,7 +50,7 @@ export default class CheckoutCart extends React.Component{
                             <h6 className="my-0">Promo code</h6>
                             <small>{this.state.discount}% Discount</small>
                         </div>
-                        <span className="text-success">-${(this.state.discount/100 * totalPrice).toFixed(2)}</span>
+                        <span className="text-success">-${(this.state.discount/100 * this.state.totalPrice).toFixed(2)}</span>
                     </li>
                     <li className="list-group-item d-flex justify-content-between">
                         <span>Total (USD)</span>
