@@ -28,7 +28,7 @@ function BlogPostCards(props){
 
             
             <Consumer>
-                {({ state }) => 
+                {({ state, actions }) => 
                     (
                         state.products.map((item,index)=>{
                             return <ProductInfo 
@@ -36,6 +36,7 @@ function BlogPostCards(props){
                                     name={item.name}
                                     image={item.image_url}
                                     description={item.description}
+                                    idOfProduct={item.id}
                                     />;
                             
                         })
@@ -68,7 +69,8 @@ function BlogPostCards(props){
     ProductInfo.propTypes = {
         name:PropTypes.string,
         image:PropTypes.string,
-        description:PropTypes.string
+        description:PropTypes.string,
+        idOfProduct:PropTypes.number
         };
 
 export default BlogPostCards;
@@ -78,6 +80,13 @@ function ProductInfo(props){
                 <div className="col-md-4">
                     <div className="card flex">
                         <div className="card-body">
+                            <Consumer>
+                                {
+                                    ({actions}) =>{
+                                        return <button className="btn btn-primary" onClick={()=>actions.addProductToCart (props.idOfProduct)}>Buy</button>;
+                                    }
+                                }
+                            </Consumer> 
                             <h3 className="mb-0">
                                 <a className="text-dark" href="#">{props.name}</a>
                             </h3>
