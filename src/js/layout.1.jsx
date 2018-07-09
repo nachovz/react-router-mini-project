@@ -146,11 +146,19 @@ export default class Layout extends React.Component {
                         url: "https://github.com/4geeksacademy"
                     }
                 ],
-            cart:[]
+            cart:[
+                {
+                    id: 1,
+                    name: "A Laptop computer",
+                    price: 30,
+                    image_url: "http://picsum.photos/600/600/?image=1",
+                    description: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham."
+                }
+            ]
         };
         
         this.actions = {
-            addProductToCart: (productId) =>{
+            addProductToCart: (productId) => {
                 let tempCart = this.state.cart;
                 
                 let arrayWithTheProduct = this.state.products.filter( (product) => {

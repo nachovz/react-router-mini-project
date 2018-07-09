@@ -23,9 +23,7 @@ export class Checkout extends React.Component{
                     </div>
                     <CheckoutFooter />
                 </div>
-
             </React.Fragment>
-
         );
     }
 }
