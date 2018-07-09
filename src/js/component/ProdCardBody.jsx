@@ -17,6 +17,11 @@ export default class ProdCardBody extends React.Component {
         };
         this.arrObj = [];   
         this.count = 0;
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
     }
 
     GetStyleClass () {
@@ -59,18 +64,30 @@ export default class ProdCardBody extends React.Component {
         //this.forceUpdate();
         }
         
+    callActionState (idProduct) {
+        
+        return null; 
+        }        
+        
     returnValueArrays (index, parray, pcounter) {
         return <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" key={index} >
-            {parray.map((valuebootstrap, index) => {
+            {parray.map((value, index) => {
                             ++this.count;
                             return <div className={this.GetStyleClass(this.count).left+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"} key={index} >
                                 <div className="my-3 py-3">
-                                    <h2 className="display-5">{valuebootstrap.name}</h2>
-                                    <p className="lead">{valuebootstrap.description}</p>
-                                    <p className="lead">Price: {valuebootstrap.price}</p>
+                                    <h2 className="display-5">{value.name}</h2>
+                                    <p className="lead">{value.description}</p>
+                                    <p className="lead">Price: {value.price}</p>
+                                    <Consumer>
+                                        {
+                                            ({actions}) => {
+                                                return <button className="btn btn-primary" onClick={() => actions.addProductToCart(value.id)}>Buy</button>;
+                                                 }
+                                             }  
+                                    </Consumer> 
                                 </div>
                                 <div className={"cardLoop1 "+this.GetStyleClass(this.count).right+" box-shadow mx-auto"}>
-                                    <img className="img-responsive" src={valuebootstrap.image_url} alt="Chania" width="200" height="200" />
+                                    <img className="img-responsive" src={value.image_url} alt="Chania" width="200" height="200" />
                                 </div>
                                 <style>{'div .cardLoop1 {width: 80%; height: 300px; border-radius: 21px 21px 0 0;'}</style>
                             
