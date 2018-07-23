@@ -70,7 +70,7 @@ export default class ProdCardBody extends React.Component {
         }        
         
     returnValueArrays (index, parray, pcounter) {
-        return <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3" key={index} >
+        return <div className="d-md-flex flex-md-6 w-100 my-md-3 pl-md-3" key={index} >
             {parray.map((value, index) => {
                             ++this.count;
                             return <div className={this.GetStyleClass(this.count).left+" mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"} key={index} >
